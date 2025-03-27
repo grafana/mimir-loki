@@ -19,8 +19,8 @@ package prometheusremotewrite
 import (
 	"go.opentelemetry.io/collector/pdata/pmetric"
 
-	prometheustranslator "github.com/prometheus/otlptranslator"
 	"github.com/prometheus/prometheus/prompb"
+	prometheustranslator "github.com/prometheus/prometheus/storage/remote/otlptranslator/prometheus"
 )
 
 func otelMetricTypeToPromMetricType(otelMetric pmetric.Metric) prompb.MetricMetadata_MetricType {
