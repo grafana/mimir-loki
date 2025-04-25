@@ -389,3 +389,6 @@ replace github.com/grafana/loki/pkg/push => ./pkg/push
 
 // leodido fork his project to continue support
 replace github.com/influxdata/go-syslog/v3 => github.com/leodido/go-syslog/v4 v4.1.0
+
+// Just to fix conflict in signature of promql.PreprocessExpr
+replace github.com/prometheus/prometheus => github.com/grafana/mimir-prometheus v1.8.2-0.20250425155544-021237de0aa2
