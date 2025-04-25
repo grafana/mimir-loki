@@ -267,7 +267,7 @@ func (s resultsCache) isAtModifierCachable(r Request, maxCacheTime int64) bool {
 	}
 
 	// This resolves the start() and end() used with the @ modifier.
-	expr = promql.PreprocessExpr(expr, r.GetStart(), r.GetEnd())
+	expr, _ = promql.PreprocessExpr(expr, r.GetStart(), r.GetEnd())
 
 	end := r.GetEnd().UnixMilli()
 	atModCachable := true
